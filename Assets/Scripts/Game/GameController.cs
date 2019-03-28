@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour {
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemies.Length == 0)
-            CanvasRoundText.text = "Você venceu a rodada :D ";
+            CanvasRoundText.text = "Você venceu a batalha :D ";
         else
             return true;
 
@@ -59,7 +59,7 @@ public class GameController : MonoBehaviour {
     {
         GameObject[] towers = GameObject.FindGameObjectsWithTag("Tower");
         if (towers.Length == 0)
-            CanvasRoundText.text = "Você perdeu :(";
+            CanvasRoundText.text = "Você perdeu a guerra :(";
         else
             return true;
 
