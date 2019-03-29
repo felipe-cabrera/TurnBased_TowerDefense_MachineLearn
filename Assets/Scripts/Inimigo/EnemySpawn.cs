@@ -15,13 +15,17 @@ public class EnemySpawn : MonoBehaviour {
 
     public GameObject[] enemiesPrefab;
 
-    public void SpawnTheEnemies(int amount)
+    public void SpawnTheEnemies(int baseAmount)
     {
         // Get positions of Towers and Enemies relative to the Grid
         towersPosition = GameObject.FindGameObjectsWithTag("TowerGrid").ToList();
         enemiesPosition = GameObject.FindGameObjectsWithTag("EnemyGrid").ToList();
 
-        for(int i = 0; i < amount; i++)
+
+        // Increase in 1 the amount of units to spawn every round
+        int amount = baseAmount + GameObject.FindGameObjectWithTag("GameController").GetComponent<WarController>().ActualRound - 1;
+
+        for (int i = 0; i < amount; i++)
         {
             posX = Random.Range(0, 9) - 4; // From -4 to +4
             posY = Random.Range(0, 9) - 4; // From -4 to +4

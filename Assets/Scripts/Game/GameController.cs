@@ -6,56 +6,72 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
     public Button ButtonNextRound;
+
+    public Button ButtonNextBattle;
+
     public Text CanvasRoundText;
-	public void NextRound()
+
+    bool battling;
+
+    public void NextRound()
     {
+        battling = true;
         StartCoroutine(NextRoundCoroutine());
     }
 
     IEnumerator NextRoundCoroutine()
     {
-        ButtonNextRound.interactable = false;
-        GameObject[] towers = GameObject.FindGameObjectsWithTag("Tower");
-        
 
-        foreach (GameObject tower in towers)
+        if(battling)
         {
-            tower.GetComponent<TowerController>().NextRound();
-            if(CheckEnemies()) // Check if there is any enemy remaining
+            ButtonNextRound.interactable = false;
+            GameObject[] towers = GameObject.FindGameObjectsWithTag("Tower");
+
+
+            foreach (GameObject tower in towers)
+            {
+                tower.GetComponent<TowerController>().NextRound();
+                if (EnemiesAlive()) // Check if there is any enemy remaining
+                    yield return new WaitForSeconds(1.5f);
+                else
+                    yield return new WaitForSeconds(0.1f);
+            }
+
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+            if (!EnemiesAlive())
+            {
+                BattleWin();
+                battling = false;
+                yield break;
+            }
+
+
+            foreach (GameObject enemy in enemies)
+            {
+                enemy.GetComponent<EnemyController>().NextRound();
                 yield return new WaitForSeconds(1.5f);
-            else
-                yield return new WaitForSeconds(0.1f);
+            }
+            ButtonNextRound.interactable = true;
+
+
+            if (TowersAlive())
+                EnemiesAlive();
         }
-
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-        CheckEnemies();
-
-        foreach (GameObject enemy in enemies)
-        {
-            enemy.GetComponent<EnemyController>().NextRound();
-            yield return new WaitForSeconds(1.5f);    
-        }
-        ButtonNextRound.interactable = true;
-
         
-        if(CheckTowers())
-            CheckEnemies();
         
     }
 
-    bool CheckEnemies()
+    bool EnemiesAlive()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemies.Length == 0)
-            CanvasRoundText.text = "Você venceu a batalha!";
-        else
-            return true;
-
-        return false;
+            return false;
+        
+        return true;
     }
 
-    bool CheckTowers()
+    bool TowersAlive()
     {
         GameObject[] towers = GameObject.FindGameObjectsWithTag("Tower");
         if (towers.Length == 0)
@@ -65,5 +81,19 @@ public class GameController : MonoBehaviour {
 
         return false;
 
+    }
+
+    void BattleWin()
+    {
+        CanvasRoundText.text = "Você venceu a batalha!";
+        ButtonNextRound.interactable = false;
+        ButtonNextBattle.interactable = true;
+        ButtonNextBattle.gameObject.transform.GetChild(0).GetComponent<Text>().text = "Proxima Batalha";
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<WarController>().ActualRound += 1;
+    }
+
+    public void UpdateUI()
+    {
+        CanvasRoundText.text = "Batalha atual: " + GameObject.FindGameObjectWithTag("GameController").GetComponent<WarController>().ActualRound;
     }
 }
