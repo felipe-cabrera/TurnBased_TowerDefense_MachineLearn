@@ -38,10 +38,6 @@ public class EnemyController : MonoBehaviour
             else
                 EnemyGrid.transform.position = new Vector2(EnemyGrid.transform.position.x, EnemyGrid.transform.position.y - 1);
         }
-        else
-        {
-            Debug.Log("Reached the tower");
-        }
 
         NearestTower = FindNearestTower();
         AimToTarget();

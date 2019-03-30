@@ -9,11 +9,11 @@ public class BulletTypes : MonoBehaviour
     [System.Serializable]
     public enum Types
     {
-        Voador,
-        Quadrupede,
-        Bipede,
-        Rastejante,
-        Subterraneo
+        Blue,
+        Yellow,
+        Green,
+        Purple,
+        Orange
     }
 
     public Types BulletType; // The type of this Bullet

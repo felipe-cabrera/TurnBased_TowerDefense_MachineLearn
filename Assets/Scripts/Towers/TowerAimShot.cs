@@ -38,6 +38,8 @@ public class TowerAimShot : MonoBehaviour
         return string.Format("Tower[{ 0},{ 1}] can't shoot any target", towerPosition.x, towerPosition.y);
     }
 
+
+
     string Shot()
     {
         Vector3 towerPosition = tower.transform.parent.transform.parent.transform.position;

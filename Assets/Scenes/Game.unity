@@ -1954,7 +1954,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300036, guid: bf6f0e55e973ba848ba0643762b3c801, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6696333, b: 0.6696333, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2488,7 +2488,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300038, guid: bf6f0e55e973ba848ba0643762b3c801, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6696333, b: 0.6696333, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2783,11 +2783,11 @@ RectTransform:
   - {fileID: 1101721019}
   - {fileID: 384782125}
   m_Father: {fileID: 872102346}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.555, y: 0.043894116}
   m_AnchorMax: {x: 0.9850001, y: 0.290777}
-  m_AnchoredPosition: {x: -0.47003174, y: 1.9869995}
+  m_AnchoredPosition: {x: -0.47003174, y: 2}
   m_SizeDelta: {x: -2, y: -0.92900085}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &595449003
@@ -3054,7 +3054,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300040, guid: bf6f0e55e973ba848ba0643762b3c801, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6696333, b: 0.6696333, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3203,7 +3203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ed32480948167469ecf6b12904da08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TowerType: 4
+  TowerType: 1
 --- !u!114 &663259423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4371,7 +4371,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 462470873}
-  - {fileID: 1090707594}
   - {fileID: 595449002}
   - {fileID: 1333931692}
   m_Father: {fileID: 0}
@@ -4609,7 +4608,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300262, guid: bf6f0e55e973ba848ba0643762b3c801, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6696333, b: 0.6696333, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4925,7 +4924,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300270, guid: bf6f0e55e973ba848ba0643762b3c801, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6696333, b: 0.6696333, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5435,87 +5434,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1060848766224756, guid: 54cc3aa4ec6554c428a62ed31747cd09, type: 3}
---- !u!1 &1090707593
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1090707594}
-  - component: {fileID: 1090707596}
-  - component: {fileID: 1090707595}
-  m_Layer: 5
-  m_Name: Todo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1090707594
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090707593}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 872102346}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.57875013, y: 0.8091059}
-  m_AnchorMax: {x: 0.95500004, y: 0.9844352}
-  m_AnchoredPosition: {x: 2.1000366, y: 2.274994}
-  m_SizeDelta: {x: 1.1, y: 4.55}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1090707595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090707593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 12
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 121
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "TODO:\n- Fazer os outros inimigos\n- Fazer gerar inimigos de forma certa\n
-    \ - Random min,max para cada tipo e tipoCerto\n- Mudar nome dos tipos de torres,
-    tiros e inimigos\n"
---- !u!222 &1090707596
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090707593}
-  m_CullTransparentMesh: 0
 --- !u!1 &1101721018
 GameObject:
   m_ObjectHideFlags: 0
@@ -6450,7 +6368,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300274, guid: bf6f0e55e973ba848ba0643762b3c801, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6696333, b: 0.6696333, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6501,6 +6419,7 @@ GameObject:
   - component: {fileID: 1296372888}
   - component: {fileID: 1296372887}
   - component: {fileID: 1296372890}
+  - component: {fileID: 1296372891}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -6539,7 +6458,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesPrefab:
-  - {fileID: 1202823027099546, guid: d7b0e98517e84344ba55bc09a2f8a8c7, type: 3}
+  - {fileID: 4839461291449111704, guid: 7f5df8316ff558a43afe8a40d59e4bde, type: 3}
+  - {fileID: 4770552211238817598, guid: 00073761ecdd1d146935c480bb63ce0a, type: 3}
+  - {fileID: 9098567104234622223, guid: d7b0e98517e84344ba55bc09a2f8a8c7, type: 3}
+  - {fileID: 4960031572323144271, guid: bf7ed6ef21ac9344cbc91160e9bcc149, type: 3}
+  - {fileID: 614912045063404431, guid: e7460a59303ec454bb96e5863433b803, type: 3}
+  - {fileID: 3156595842845192069, guid: 1b81549b831441e45955d457fcde18fc, type: 3}
+  - {fileID: 9089228886830766117, guid: 1087c8ab489b36a4987ada4e5dec22be, type: 3}
+  - {fileID: 314905793146434361, guid: 0ba912ced6774f540b7e2df6e0c8d662, type: 3}
+  - {fileID: 8149267257880432194, guid: 9dccf9f58662bad48a9e5e3ba88d3ed5, type: 3}
+  - {fileID: 1959567345927880758, guid: 5c2d76e133b84bb41882ecba2440640d, type: 3}
 --- !u!114 &1296372888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6578,8 +6506,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c28ce7cf8a6889d4792bfce55f450ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentRound: 1
+  CurrentRound: 5
   Score: 0
+--- !u!114 &1296372891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296372885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ce6ac3fb95bb54295ca6af853308b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1298198783
 GameObject:
   m_ObjectHideFlags: 0
@@ -6809,7 +6749,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300040, guid: bf6f0e55e973ba848ba0643762b3c801, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6696333, b: 0.6696333, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6865,11 +6805,11 @@ RectTransform:
   - {fileID: 1655522749}
   - {fileID: 1797509777}
   m_Father: {fileID: 872102346}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.555, y: 0.35322353}
   m_AnchorMax: {x: 0.9850001, y: 0.8091059}
-  m_AnchoredPosition: {x: -0.47003174, y: 0.5}
+  m_AnchoredPosition: {x: -0.47003174, y: 63}
   m_SizeDelta: {x: -2, y: -1.8999939}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1333931693
@@ -7402,7 +7342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ed32480948167469ecf6b12904da08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TowerType: 2
+  TowerType: 4
 --- !u!114 &1438011506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7572,7 +7512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ed32480948167469ecf6b12904da08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TowerType: 1
+  TowerType: 3
 --- !u!114 &1459690247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7895,7 +7835,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300042, guid: bf6f0e55e973ba848ba0643762b3c801, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6696333, b: 0.6696333, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9286,7 +9226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ed32480948167469ecf6b12904da08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TowerType: 3
+  TowerType: 2
 --- !u!114 &1788660557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10170,7 +10110,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300264, guid: bf6f0e55e973ba848ba0643762b3c801, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6696333, b: 0.6696333, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11232,6 +11172,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 286906450033217766, guid: c28270fae1c1ff64a9e2de9234b4359d,
+        type: 3}
+      propertyPath: TowerType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 286196717430619010, guid: c28270fae1c1ff64a9e2de9234b4359d,
         type: 3}
       propertyPath: m_Name
@@ -11316,6 +11261,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 1742616439946319985, guid: 341214fd9e713c04c8f028761703d604,
+        type: 3}
+      propertyPath: TowerType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1741918801372334323, guid: 341214fd9e713c04c8f028761703d604,
         type: 3}
       propertyPath: m_Name
@@ -11399,6 +11349,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946574992178255537, guid: 9ea9a6889116b764da249fd3b1a8befb,
+        type: 3}
+      propertyPath: TowerType
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2947566205541716884, guid: 9ea9a6889116b764da249fd3b1a8befb,
         type: 3}
@@ -11582,6 +11537,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503581135554507728, guid: 872d46975274f1e4fbdfd8ded496eff0,
+        type: 3}
+      propertyPath: TowerType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7503453040576216343, guid: 872d46975274f1e4fbdfd8ded496eff0,
         type: 3}

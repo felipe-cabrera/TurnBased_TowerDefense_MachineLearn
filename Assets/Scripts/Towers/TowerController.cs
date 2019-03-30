@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class TowerController : MonoBehaviour
 {
@@ -40,17 +41,59 @@ public class TowerController : MonoBehaviour
         if (targets.Length > 0)
             target = targets[0];
 
+        List<GameObject> sameTypes = new List<GameObject>();
+
         foreach (GameObject tempTarget in targets)
         {
             if ((int)this.GetComponent<TowerTypes>().TowerType == (int)tempTarget.GetComponent<EnemyTypes>().ClassifiedEnemyType)
             {
-                target = tempTarget;
-                break;
+                sameTypes.Add(tempTarget);
             }
+        }
+
+        if (sameTypes.Count > 0)
+        {
+            target = FindNearestEnemy(sameTypes);
+        }
+        else
+        {
+            target = FindNearestEnemy(targets.ToList());
         }
 
         return target;
     }
+
+    // Ger the nearest enemy by Manhattan Distance
+    GameObject FindNearestEnemy(List<GameObject> enemies)
+    {
+        // Collection of all TowerGrids (Tower objects with position relative to the grid)
+        
+
+        // Default Values
+        float distance = float.MaxValue;
+
+
+        GameObject nearest = null;
+
+        if (enemies.Count > 0 && enemies[0] != null)
+            nearest = enemies[0];
+
+        // Get the nearest tower
+        foreach (GameObject enemy in enemies)
+        {
+            float tempDistance = Mathf.Abs(enemy.transform.parent.transform.position.x - transform.parent.transform.parent.transform.position.x) + Mathf.Abs(enemy.transform.parent.transform.position.y - transform.parent.transform.parent.transform.position.y);
+            if (tempDistance < distance)
+            {
+                distance = tempDistance;
+                nearest = enemy;
+            }
+        }
+
+        return nearest;
+    }
+
+
+
 
     // Damage the tower, reducing the life in one
     public void DamageTheTower()
