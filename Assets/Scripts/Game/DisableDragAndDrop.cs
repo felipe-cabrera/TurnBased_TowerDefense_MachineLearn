@@ -6,7 +6,7 @@ public class DisableDragAndDrop : MonoBehaviour {
 
 	public void RemoveDragDrop()
     {
-        GameObject[] dragDrops = GameObject.FindGameObjectsWithTag("TorreDragDrop");
+        GameObject[] dragDrops = GameObject.FindGameObjectsWithTag("TowerDragDrop");
         foreach(GameObject dragDrop in dragDrops)
         {
             GameObject.Destroy(dragDrop.GetComponent<DragAndDrop>());

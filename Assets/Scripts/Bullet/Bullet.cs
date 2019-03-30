@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour {
+public class Bullet : MonoBehaviour
+{
 
     float moveSpeed = 7f; // Move speed of this bullet
     Rigidbody2D rb; // Our RigidBody2D property
@@ -10,8 +11,9 @@ public class Bullet : MonoBehaviour {
     Vector2 moveDirection; // The direction to shot
     public TowerController tower; // The main tower (we will get it's Type and Target)
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
 
         rb = GetComponent<Rigidbody2D>();
 
@@ -28,18 +30,18 @@ public class Bullet : MonoBehaviour {
         }
         else
         {
-            Debug.Log("Null, destruindo");
+
             Destroy(this);
         }
-	}
-	
+    }
+
     // When we enter on a trigger "Touch some object"
-	void OnTriggerEnter2D (Collider2D col) {
+    void OnTriggerEnter2D(Collider2D col)
+    {
 
 
         if (col.gameObject.tag.Equals("Enemy"))
         {
-            Debug.Log("Hit The Enemy!");
             Destroy(gameObject);
             if ((int)this.GetComponent<BulletTypes>().BulletType == (int)col.GetComponent<EnemyTypes>().RealEnemyType)
                 col.GetComponent<EnemyController>().DamageTheEnemy(true);

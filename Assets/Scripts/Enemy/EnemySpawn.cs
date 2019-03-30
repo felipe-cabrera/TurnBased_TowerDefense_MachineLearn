@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class EnemySpawn : MonoBehaviour {
+public class EnemySpawn : MonoBehaviour
+{
 
     int posX;
     int posY;
 
-    int maxAmount = 15;
+    int maxAmount = 20;
 
     List<GameObject> enemiesPosition;
     List<GameObject> towersPosition;
@@ -23,7 +24,9 @@ public class EnemySpawn : MonoBehaviour {
 
 
         // Increase in 1 the amount of units to spawn every round
-        int amount = baseAmount + GameObject.FindGameObjectWithTag("GameController").GetComponent<WarController>().ActualRound - 1;
+        int amount = baseAmount + GameObject.FindGameObjectWithTag("GameController").GetComponent<WarController>().CurrentRound - 1;
+        if (amount > maxAmount)
+            amount = maxAmount;
 
         for (int i = 0; i < amount; i++)
         {
@@ -48,19 +51,18 @@ public class EnemySpawn : MonoBehaviour {
                 {
                     availablePosition = false;
                     break;
-                }    
+                }
             }
 
             if (!availablePosition)
                 return;
 
             // If everything is okay, we will instantiate the enemy in the correct position
-            Debug.Log("Will spawn a enemy at: [ " + posX + ", " + posY + "]");
             int randomEnemyIndex = Random.Range(0, enemiesPrefab.Length);
-            GameObject enemyToSpawn = Instantiate(enemiesPrefab[randomEnemyIndex], new Vector2(posX,posY),Quaternion.identity);
+            GameObject enemyToSpawn = Instantiate(enemiesPrefab[randomEnemyIndex], new Vector2(posX, posY), Quaternion.identity);
             enemiesPosition.Add(enemyToSpawn);
         }
-      
+
 
     }
 

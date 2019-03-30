@@ -2,24 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerController : MonoBehaviour {
+public class TowerController : MonoBehaviour
+{
 
     public GameObject target;
     public int Life = 2;
     public Animator TowerAnimator;
     // Use this for initialization
-    void Start () {
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    public void NextRound()
+    void Start()
     {
-        this.GetComponent<TowerAimShot>().NextRound();
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    public string NextRound()
+    {
+        return this.GetComponent<TowerAimShot>().NextRound();
     }
 
     public GameObject UpdateTarget()
@@ -32,12 +35,14 @@ public class TowerController : MonoBehaviour {
         {
             target = null;
             return null;
-        }        
+        }
 
-        target = targets[0];
-        foreach(GameObject tempTarget in targets)
+        if (targets.Length > 0)
+            target = targets[0];
+
+        foreach (GameObject tempTarget in targets)
         {
-            if((int)this.GetComponent<TowerTypes>().TowerType == (int)tempTarget.GetComponent<EnemyTypes>().ClassifiedEnemyType)
+            if ((int)this.GetComponent<TowerTypes>().TowerType == (int)tempTarget.GetComponent<EnemyTypes>().ClassifiedEnemyType)
             {
                 target = tempTarget;
                 break;
@@ -53,7 +58,9 @@ public class TowerController : MonoBehaviour {
         Life--;
         TowerAnimator.SetInteger("vida", Life);
         if (Life == 0)
-            GameObject.Destroy(gameObject);
+            GameObject.Destroy(gameObject.transform.parent.transform.parent.gameObject);
     }
+
+
 
 }

@@ -8,7 +8,7 @@ TagManager:
   - TowerGrid
   - Enemy
   - EnemyGrid
-  - TorreDragDrop
+  - TowerDragDrop
   layers:
   - Default
   - TransparentFX

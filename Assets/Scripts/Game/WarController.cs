@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WarController : MonoBehaviour {
+public class WarController : MonoBehaviour
+{
 
-    public int ActualRound;
+    public int CurrentRound;
     public int Score;
 
 
@@ -12,4 +13,6 @@ public class WarController : MonoBehaviour {
     {
 
     }
+
+
 }
