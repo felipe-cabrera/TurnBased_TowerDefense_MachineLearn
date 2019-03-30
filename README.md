@@ -45,9 +45,9 @@ This project is totally educational, aiming only at sharing knowledge and scienc
 If it is useful to you, you can use it as you wish, just give us the credits (citation)
 
 # Images used in game
-All images used are free and have no copyright
-Background: The U.S. National Archives 
-  - Source: https://nara.getarchive.net/media/artwork-close-combat-world-war-ii-artist-hamilton-greene-catalog-number-d13883-949654
-Game Sprites (Images): Kenney
-  - Source: https://www.kenney.nl/assets/tower-defense-top-down
+All images used are free and have no copyright  
+- Background: The U.S. National Archives   
+  - Source: https://nara.getarchive.net/media/artwork-close-combat-world-war-ii-artist-hamilton-greene-catalog-number-d13883-949654  
+- Game Sprites (Images): Kenney  
+  - Source: https://www.kenney.nl/assets/tower-defense-top-down  
  
