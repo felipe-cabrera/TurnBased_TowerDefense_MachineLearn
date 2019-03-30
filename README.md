@@ -30,15 +30,15 @@ The game runs in a period of war, your nation is being attacked by 5 different a
   - How many Enemies we defeat
 
 # Authors
-Felipe Cabrera Ribeiro dos Santos - 
-Mauricio Anderson Perecim
-Vinícius de Souza Gonçalves
+Felipe Cabrera Ribeiro dos Santos  
+Mauricio Anderson Perecim  
+Vinícius de Souza Gonçalves  
 
 # Requirements
 Unity version 2019.1.0b9 or superior.
   - You can download it at: https://unity3d.com/pt/get-unity/download
 Visual Studio 2019 (Recommended) or 2017.
-  - You can download it at: https://visualstudio.microsoft.com/pt-br/vs/
+  - You can download it at: https://visualstudio.microsoft.com/vs/
   
 # Copyright
 This project is totally educational, aiming only at sharing knowledge and science.
