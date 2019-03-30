@@ -6506,7 +6506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c28ce7cf8a6889d4792bfce55f450ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentRound: 5
+  CurrentRound: 1
   Score: 0
 --- !u!114 &1296372891
 MonoBehaviour:
