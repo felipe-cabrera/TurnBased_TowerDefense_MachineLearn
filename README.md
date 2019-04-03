@@ -32,6 +32,7 @@ The game runs in a period of war, your nation is being attacked by 5 different a
 # Authors
 Felipe Cabrera Ribeiro dos Santos  
 Mauricio Anderson Perecim  
+Paulo Berlanga Neto  
 Vinícius de Souza Gonçalves  
 
 # Requirements
